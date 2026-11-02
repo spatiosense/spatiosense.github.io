@@ -1,0 +1,1 @@
+const s="embodx-product-tour-command",n="embodx-product-tour-restart",e="embodx-product-tour-state-change",o="embodx-tour-state",a=t=>{window.dispatchEvent(new CustomEvent(s,{detail:t}))},T=()=>sessionStorage.getItem(o),d=t=>{sessionStorage.setItem(o,t),window.dispatchEvent(new CustomEvent(e,{detail:t}))};export{s as P,n as a,a as d,T as g,d as s};
