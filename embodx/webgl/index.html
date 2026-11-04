@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>SpatioSense 3D Viewer</title>
+  <title>Spatiosense 3D Viewer</title>
   <script>window.__EMBODX_STANDALONE__ = true;</script>
 
   <style>
@@ -53,6 +53,7 @@
     .attribution a:hover { text-decoration:underline; }
   </style>
 
+  
   
   
   
@@ -129,10 +130,10 @@ async function __trunkInitializer(init, source, sourceSize, initializer, initWit
 }
 
 
-import init, * as bindings from './embodx-1686377ae669f10e.js';
-import initializer from './d7bd822a27e98f56-initializer.mjs';
+import init, * as bindings from './embodx-c38898693aa82cda.js';
+import initializer from './975d410a89fdb979-initializer.mjs';
 
-const wasm = await __trunkInitializer(init, './embodx-1686377ae669f10e_bg.wasm', 36580998, initializer(), true);
+const wasm = await __trunkInitializer(init, './embodx-c38898693aa82cda_bg.wasm', 36581001, initializer(), true);
 
 
 window.wasmBindings = bindings;
@@ -142,7 +143,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
 </script>
 <meta name="embodx-lto" content="thin">
-<link rel="modulepreload" href="./embodx-1686377ae669f10e.js" crossorigin="anonymous" integrity="sha384-cZzKU+eahM7SEDNQIq/WQn84o4alA6OCT0LTUxOcoMxqv808pbSfQwVnr5/MPtfW"><link rel="modulepreload" href="./snippets/dimensify_splat-be4e370ac245af31/src/streaming/runtime/codec_jobs.mjs" crossorigin="anonymous" integrity="sha384-Xmze0ozXkSFGJhQoUZBr3KDyIbO3hFW8sMTTuY/8W1L9xuVLrHLDmp8EdmBJe6B7"><link rel="modulepreload" href="./snippets/bevy_gaussian_splatting-6cf776f7255c5542/src/render/webgl/sort_jobs.mjs" crossorigin="anonymous" integrity="sha384-b4zY0vkXeqxFyM2HiQRF067PhgxbOaFXm2oKk32p5Et4UEwqRFmnLqi7wYwpXiT0"><link rel="modulepreload" href="./snippets/embodx-36cc021a88c3ee36/src/browser_menu.mjs" crossorigin="anonymous" integrity="sha384-9hV6sKCyi7hJZojROqBLAAwu6mnMyELlbS6tBxKju3r8pvS6jQGJm/t8fVkVKnmv"><link rel="modulepreload" href="./snippets/spatiosense_widgets-2a7736543fc3aa32/src/widget/text_input/browser.mjs" crossorigin="anonymous" integrity="sha384-t0nsEzk1o8r9ZwZ/egkdrWnsEZSc/vHjtBlQOv9Y2loFxo4Ocvy7YSv6k6xfhG3+"><link rel="modulepreload" href="./d7bd822a27e98f56-initializer.mjs" crossorigin="anonymous" integrity="sha384-mlAyDCj8HjXE4pwiovALhH33TNb1DjGTWGr6QiDMzp7fE+OKUbMKJM/G6zAbohTX"><link rel="preload" href="./embodx-1686377ae669f10e_bg.wasm" crossorigin="anonymous" integrity="sha384-Jmg1joOcCosB7wtoOacJ0G2pRIFkwANU0JeCi8m35tzOLt+jrbjC5bGlJ+2G8nVP" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="./embodx-c38898693aa82cda.js" crossorigin="anonymous" integrity="sha384-cZzKU+eahM7SEDNQIq/WQn84o4alA6OCT0LTUxOcoMxqv808pbSfQwVnr5/MPtfW"><link rel="modulepreload" href="./snippets/dimensify_splat-be4e370ac245af31/src/streaming/runtime/codec_jobs.mjs" crossorigin="anonymous" integrity="sha384-Xmze0ozXkSFGJhQoUZBr3KDyIbO3hFW8sMTTuY/8W1L9xuVLrHLDmp8EdmBJe6B7"><link rel="modulepreload" href="./snippets/spatiosense_widgets-2a7736543fc3aa32/src/widget/text_input/browser.mjs" crossorigin="anonymous" integrity="sha384-t0nsEzk1o8r9ZwZ/egkdrWnsEZSc/vHjtBlQOv9Y2loFxo4Ocvy7YSv6k6xfhG3+"><link rel="modulepreload" href="./snippets/bevy_gaussian_splatting-6cf776f7255c5542/src/render/webgl/sort_jobs.mjs" crossorigin="anonymous" integrity="sha384-b4zY0vkXeqxFyM2HiQRF067PhgxbOaFXm2oKk32p5Et4UEwqRFmnLqi7wYwpXiT0"><link rel="modulepreload" href="./snippets/embodx-36cc021a88c3ee36/src/browser_menu.mjs" crossorigin="anonymous" integrity="sha384-9hV6sKCyi7hJZojROqBLAAwu6mnMyELlbS6tBxKju3r8pvS6jQGJm/t8fVkVKnmv"><link rel="modulepreload" href="./975d410a89fdb979-initializer.mjs" crossorigin="anonymous" integrity="sha384-xFJeTHhHQHR/u1evXJ73x30JZfnG0sPyJUU/fM/c4KL1/Fhzd5jrJmTUM9xgeZop"><link rel="preload" href="./embodx-c38898693aa82cda_bg.wasm" crossorigin="anonymous" integrity="sha384-jPuBRW/hsZ9yLHLwUpTz8ifrk/Aa2btkMTdXqILz9TYFkiKwCJ2Zy52id60H+0n7" as="fetch" type="application/wasm"></head>
 
 <body>
   <script>

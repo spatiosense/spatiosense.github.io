@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+}
+.startup-page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  padding: 24px;
+  background: #f8f9fb;
+  color: #172033;
+  font-family: system-ui, sans-serif;
+}
+.startup-card {
+  max-width: 420px;
+  text-align: center;
+}
+.startup-card .startup-brand {
+  color: #172033;
+  font-size: 24px;
+  font-weight: 650;
+  letter-spacing: -1px;
+  margin: 0 0 32px;
+}
+.startup-card h1 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 16px 0 8px;
+}
+.startup-card p {
+  color: #586174;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+.startup-spinner {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #dce3ed;
+  border-top-color: #315eaa;
+  border-radius: 50%;
+  animation: startup-spin 1s linear infinite;
+}
+.startup-card button {
+  margin-top: 24px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: #172033;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+.startup-card button:focus-visible {
+  outline: 3px solid #315eaa;
+  outline-offset: 4px;
+}
+@keyframes startup-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .startup-spinner {
+    animation: none;
+  }
+}
