@@ -11,19 +11,49 @@
     <title>Spatiosense - Construction AI</title>
     <link rel="stylesheet" href="/startup.css" />
     <script src="/runtime-config.js"></script>
-    <script type="module" crossorigin src="/assets/index-CZ6lDUl2.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Bwj6N72F.css">
+    <script type="module" crossorigin src="/assets/index-KBdckHlO.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-pH1xOtZK.css">
   </head>
   <body>
     <div id="root">
-      <main class="startup-page">
-        <section class="startup-card" role="status" aria-live="polite">
-          <p class="startup-brand">spatiosense</p>
-          <span class="startup-spinner" aria-hidden="true"></span>
-          <h1>Opening your workspace…</h1>
-          <p>Loading spatiosense. This may take a few seconds.</p>
-        </section>
-      </main>
+      <div
+        class="workspace-skeleton"
+        role="status"
+        aria-label="Loading workspace"
+        aria-busy="true"
+      >
+        <aside class="skeleton-sidebar" aria-hidden="true">
+          <div class="skeleton-brand">
+            <img src="/brand/logo-cube.webp" alt="" width="40" height="40" />
+            <img
+              src="/brand/wordmark.svg"
+              alt="spatiosense"
+              width="150"
+              height="24"
+            />
+          </div>
+          <div class="skeleton-nav"><i></i><i></i><i></i><i></i></div>
+        </aside>
+        <div class="skeleton-workspace">
+          <header class="skeleton-header" aria-hidden="true">
+            <i></i><i></i>
+          </header>
+          <main class="skeleton-content">
+            <span class="skeleton-sr">Loading your workspace</span>
+            <div class="skeleton-heading" aria-hidden="true">
+              <i></i><i></i>
+            </div>
+            <div class="skeleton-cards" aria-hidden="true">
+              <div class="skeleton-card"><i></i><i></i><i></i></div>
+              <div class="skeleton-card"><i></i><i></i><i></i></div>
+              <div class="skeleton-card"><i></i><i></i><i></i></div>
+            </div>
+            <div class="skeleton-panel" aria-hidden="true">
+              <i></i><i></i><i></i><i></i>
+            </div>
+          </main>
+        </div>
+      </div>
     </div>
     <noscript>Enable JavaScript to open your spatiosense workspace.</noscript>
   </body>

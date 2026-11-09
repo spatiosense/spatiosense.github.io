@@ -1,69 +1,198 @@
 body {
   margin: 0;
-}
-.startup-page {
-  min-height: 100svh;
-  display: grid;
-  place-items: center;
-  box-sizing: border-box;
-  padding: 24px;
   background: #f8f9fb;
+}
+.workspace-skeleton {
+  display: flex;
+  min-height: 100svh;
   color: #172033;
-  font-family: system-ui, sans-serif;
+  background: #f8f9fb;
+  font:
+    15px / 1.5 system-ui,
+    sans-serif;
 }
-.startup-card {
-  max-width: 420px;
-  text-align: center;
+.workspace-skeleton * {
+  box-sizing: border-box;
 }
-.startup-card .startup-brand {
-  color: #172033;
-  font-size: 24px;
-  font-weight: 650;
-  letter-spacing: -1px;
-  margin: 0 0 32px;
+.skeleton-sidebar {
+  flex: 0 0 224px;
+  background: white;
+  border-right: 1px solid #e7e9ee;
+  padding: 24px 20px;
 }
-.startup-card h1 {
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 1.4;
-  margin: 16px 0 8px;
+.skeleton-brand {
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
-.startup-card p {
-  color: #586174;
-  font-size: 15px;
-  line-height: 1.6;
-  margin: 0;
+.skeleton-brand img {
+  object-fit: contain;
+  max-width: 100%;
 }
-.startup-spinner {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  border: 3px solid #dce3ed;
-  border-top-color: #315eaa;
-  border-radius: 50%;
-  animation: startup-spin 1s linear infinite;
+.skeleton-nav {
+  display: grid;
+  gap: 32px;
+  margin-top: 72px;
 }
-.startup-card button {
-  margin-top: 24px;
-  padding: 10px 20px;
+.workspace-skeleton i {
+  display: block;
+  border-radius: 7px;
+  background: #e9eaf0;
+  animation: skeleton-pulse 2s ease-in-out infinite;
+}
+.skeleton-nav i {
+  height: 18px;
+  width: 72%;
+}
+.skeleton-nav i:nth-child(2n) {
+  width: 58%;
+}
+.skeleton-workspace {
+  flex: 1;
+  min-width: 0;
+}
+.skeleton-header {
+  height: 80px;
+  background: white;
+  border-bottom: 1px solid #e7e9ee;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.skeleton-header i:first-child {
+  height: 30px;
+  width: min(400px, 60%);
+}
+.skeleton-header i:last-child {
+  height: 32px;
+  width: 100px;
+}
+.skeleton-content {
+  padding: 48px 32px;
+  max-width: 1440px;
+  margin: auto;
+}
+.skeleton-heading {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.skeleton-heading i:first-child {
+  width: 160px;
+  height: 30px;
+}
+.skeleton-heading i:last-child {
+  width: 45%;
+  height: 16px;
+}
+.skeleton-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.skeleton-card,
+.skeleton-panel {
+  background: white;
+  border: 1px solid #e7e9ee;
+  border-radius: 16px;
+  padding: 24px;
+}
+.skeleton-card {
+  display: grid;
+  gap: 18px;
+}
+.skeleton-card i {
+  height: 14px;
+  width: 65%;
+}
+.skeleton-card i:first-child {
+  width: 32px;
+  height: 32px;
+}
+.skeleton-card i:last-child {
+  width: 85%;
+}
+.skeleton-panel {
+  display: grid;
+  gap: 24px;
+  margin-top: 32px;
+  min-height: 240px;
+}
+.skeleton-panel i {
+  height: 18px;
+  width: 85%;
+}
+.skeleton-panel i:first-child {
+  width: 30%;
+}
+.skeleton-error {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: white;
+  border: 1px solid #e7e9ee;
+  border-radius: 12px;
+}
+.skeleton-error p {
+  margin: 0 0 8px;
+}
+.skeleton-error button {
+  background: #711cc8;
+  color: white;
   border: 0;
   border-radius: 8px;
-  background: #172033;
-  color: white;
-  font: inherit;
+  padding: 8px 16px;
   cursor: pointer;
+  font: inherit;
 }
-.startup-card button:focus-visible {
-  outline: 3px solid #315eaa;
-  outline-offset: 4px;
+.skeleton-error button:focus-visible {
+  outline: 3px solid #b78de3;
+  outline-offset: 3px;
 }
-@keyframes startup-spin {
-  to {
-    transform: rotate(360deg);
+.skeleton-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+@keyframes skeleton-pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+@media (max-width: 700px) {
+  .workspace-skeleton {
+    flex-direction: column;
+  }
+  .skeleton-sidebar {
+    flex-basis: auto;
+    padding: 16px 20px;
+    border-right: 0;
+    border-bottom: 1px solid #e7e9ee;
+  }
+  .skeleton-nav {
+    display: none;
+  }
+  .skeleton-header {
+    height: 64px;
+    padding: 16px 20px;
+  }
+  .skeleton-content {
+    padding: 32px 20px;
+  }
+  .skeleton-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .skeleton-card:nth-child(n + 2) {
+    display: none;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .startup-spinner {
+  .workspace-skeleton i {
     animation: none;
   }
 }

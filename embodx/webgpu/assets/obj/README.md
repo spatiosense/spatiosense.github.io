@@ -18,7 +18,7 @@ generate a compatible copy below, preserving supported node animation tracks.
 Do not overwrite a newer compatible model with this older source.
 
 ```sh
-rtk proxy python3 - <<'PY'
+python3 - <<'PY'
 import json
 import struct
 from pathlib import Path
